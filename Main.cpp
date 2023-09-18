@@ -1,25 +1,31 @@
-//Brenden Darnell PA1 - Memory Game
+// This code was taken from https://www.techiedelight.com/queue-implementation-cpp/
+// The code has been modified from the original to provide opportunities to learn
 
+#include "Queue.h"
+#include "testQueue.h"
 /*
-Questions:
-1. Advantages and Disadvantages of Linked List
-	Adv: Commands can easily be added and removed, due to the dynamic memory.
-	Dis: Has to be traversed through to find commands. Something more akin to a binary tree would be able to be faster.
-2. Advantage and Disadvantage of Array
-	Adv: Allows for profiles to be retrieved and accessed very quickly and easily by using indexes.
-	Dis: Has a fixed size only allowing for a set amount of profiles.
+Attributes
+1 Single file but it is better practice to at least have a three file setup like main, queue.h, and queue.cpp
+2 No real comments, had trouble figuring out what the code was supposed to be doing
+3 Queues should be built with nodes for the head and the end. This was built with an array, which doesn't work as efficiently
+4 There was no error handling for a lot of the functions which would cause the program to not function as intended if circumstances were right
+5 No way to clear the queue and no copy constructor which are essential for creating a queue.
 */
 
-#include "MemoryGame.h"
-#include <iostream>
 
-using namespace std;
 
+
+// main function
 int main()
 {
-	MemoryGame App;
-	App.runApp();
+    // call your test functions here!
+    testSize();
+    testIsEmpty();
+    testisFull();
 
-	return 0;
+    testDequeue();
+    testEnqueue();
+    testPeek();
+    return 0;
 }
 
